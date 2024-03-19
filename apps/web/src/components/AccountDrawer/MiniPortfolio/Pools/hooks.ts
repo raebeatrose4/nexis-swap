@@ -46,6 +46,7 @@ export function useContractMultichain<T extends BaseContract>(
         walletProvider && walletChainId === chainId
           ? walletProvider
           : isSupportedChain(chainId)
+          //@ts-ignore
           ? networkProviders[chainId]
           : undefined
       if (provider) {

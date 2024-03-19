@@ -26,6 +26,7 @@ function useShowOutageBannerPolygon(): boolean {
 }
 
 export function useOutageBanners(): Record<ChainId, boolean> {
+  //@ts-ignore
   return {
     [ChainId.OPTIMISM]: useShowOutageBannerOptimism(),
     [ChainId.ARBITRUM_ONE]: useShowOutageBannerArbitrum(),
@@ -47,5 +48,6 @@ export function useOutageBanners(): Record<ChainId, boolean> {
     [ChainId.AVALANCHE]: false,
     [ChainId.BASE_GOERLI]: false,
     [ChainId.BASE]: false,
+    [ChainId.NEXIS]:false
   }
 }

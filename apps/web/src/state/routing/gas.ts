@@ -32,6 +32,7 @@ export async function getApproveInfo(
     return { needsApprove: false }
   }
 
+  //@ts-ignore
   const provider = DEPRECATED_RPC_PROVIDERS[currency.chainId as SupportedInterfaceChain]
   const tokenContract = getContract(currency.address, ERC20_ABI, provider) as Erc20
 
@@ -64,6 +65,7 @@ export async function getWrapInfo(
 ): Promise<WrapInfo> {
   if (!needsWrap) return { needsWrap: false }
 
+  //@ts-ignore
   const provider = DEPRECATED_RPC_PROVIDERS[chainId]
   const wethAddress = WRAPPED_NATIVE_CURRENCY[chainId]?.address
 

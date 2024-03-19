@@ -35,6 +35,7 @@ function Updater() {
   const providers = useFallbackProviderEnabled() ? RPC_PROVIDERS : DEPRECATED_RPC_PROVIDERS
 
   // Trace RPC calls (for debugging).
+  //@ts-ignore
   const networkProvider = isSupportedChain(chainId) ? providers[chainId] : undefined
   const shouldTrace = useTraceJsonRpcFlag() === TraceJsonRpcVariant.Enabled
   useEffect(() => {

@@ -10,6 +10,7 @@ import {
   CUSD_CELO,
   CUSD_CELO_ALFAJORES,
   DAI_OPTIMISM,
+  NZT_NEXIS,
   USDC_ARBITRUM,
   USDC_ARBITRUM_GOERLI,
   USDC_AVALANCHE,
@@ -25,6 +26,7 @@ import {
 
 // Stablecoin amounts used when calculating spot price for a given currency.
 // The amount is large enough to filter low liquidity pairs.
+//@ts-ignore
 export const STABLECOIN_AMOUNT_OUT: { [key in SupportedInterfaceChain]: CurrencyAmount<Token> } = {
   [ChainId.MAINNET]: CurrencyAmount.fromRawAmount(USDC_MAINNET, 100_000e6),
   [ChainId.ARBITRUM_ONE]: CurrencyAmount.fromRawAmount(USDC_ARBITRUM, 10_000e6),
@@ -40,6 +42,7 @@ export const STABLECOIN_AMOUNT_OUT: { [key in SupportedInterfaceChain]: Currency
   [ChainId.ARBITRUM_GOERLI]: CurrencyAmount.fromRawAmount(USDC_ARBITRUM_GOERLI, 10_000e6),
   [ChainId.POLYGON_MUMBAI]: CurrencyAmount.fromRawAmount(USDC_POLYGON_MUMBAI, 10_000e6),
   [ChainId.CELO_ALFAJORES]: CurrencyAmount.fromRawAmount(CUSD_CELO_ALFAJORES, 10_000e6),
+  [ChainId.NEXIS]: CurrencyAmount.fromRawAmount(NZT_NEXIS, 10_000e6),
 }
 
 /**

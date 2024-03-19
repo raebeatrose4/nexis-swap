@@ -28,6 +28,7 @@ if (typeof QUICKNODE_BNB_RPC_URL === 'undefined') {
  *
  * These "Safe" URLs are listed first, followed by other fallback URLs, which are taken from chainlist.org.
  */
+//@ts-ignore
 export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.MAINNET]: [
     // "Safe" URLs
@@ -124,12 +125,16 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
     'https://1rpc.io/base',
     'https://base.meowrpc.com',
   ],
+  [ChainId.NEXIS]:[
+    'https://evm-testnet.nexis.network'
+  ]
 }
 
 /**
  * Application-specific JSON-RPC endpoints.
  * These are URLs which may only be used by the interface, due to origin policies, &c.
  */
+//@ts-ignore
 export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.MAINNET]: [`https://mainnet.infura.io/v3/${INFURA_KEY}`, QUICKNODE_MAINNET_RPC_URL],
   [ChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`],
@@ -145,6 +150,7 @@ export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.BNB]: [QUICKNODE_BNB_RPC_URL],
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`],
+  [ChainId.NEXIS]:['https://evm-testnet.nexis.network']
 }
 
 export const INFURA_PREFIX_TO_CHAIN_ID: { [prefix: string]: ChainId } = {

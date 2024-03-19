@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { ChainId } from '@uniswap/sdk-core'
 import AppJsonRpcProvider from 'rpc/AppJsonRpcProvider'
 

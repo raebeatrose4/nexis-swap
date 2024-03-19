@@ -16,6 +16,7 @@ export function getRouter(chainId: ChainId): AlphaRouter {
 
   const supportedChainId = asSupportedChain(chainId)
   if (supportedChainId) {
+    //@ts-ignore
     const provider = DEPRECATED_RPC_PROVIDERS[supportedChainId]
     const router = new AlphaRouter({ chainId, provider })
     routers.set(chainId, router)

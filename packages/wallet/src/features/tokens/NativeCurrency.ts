@@ -12,6 +12,7 @@ export class NativeCurrency implements NativeCurrencyClass {
       throw new Error(`Unsupported chain ID: ${chainId}`)
     }
 
+    //@ts-ignore
     const chainInfo = CHAIN_INFO[supportedChainId]
     if (!chainInfo) {
       throw new Error('Native currrency info not found')

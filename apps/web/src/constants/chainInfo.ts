@@ -242,6 +242,20 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_84531,
   },
+  //TODO @raebeatrose4
+  [ChainId.NEXIS]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms(`10m`),
+    bridge: 'https://cbridge.celer.network/1/56',
+    docs: 'https://docs.bnbchain.org/',
+    explorer: 'https://evm-testnet.nexscan.io/',
+    infoLink: 'https://info.uniswap.org/#/bnb/',
+    label: 'Nexis Network',
+    nativeCurrency: { name: 'Nexis', symbol: 'NZT', decimals: 18 },
+    defaultListUrl: PLASMA_BNB_LIST,
+    color: darkTheme.chain_56,
+    backgroundColor: darkTheme.chain_56_background,
+  },
 } as const
 
 export function getChainInfo(

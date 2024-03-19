@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@uniswap/sdk-core": {
+      "version": "4.2.0",
+      "signature": "5b796cfdb224ec0bc0ef346d4a279c89",
+      "pure": true
+    }
+  }
+}

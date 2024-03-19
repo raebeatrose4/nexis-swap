@@ -53,6 +53,7 @@ export function useSwitchChain() {
               // Instead, we modify the window's history directly to append the SearchParams.
               try {
                 const url = new URL(window.location.href)
+                //@ts-ignore
                 url.searchParams.set('chain', CHAIN_IDS_TO_NAMES[chainId])
                 window.history.replaceState(window.history.state, '', url)
               } catch (error) {

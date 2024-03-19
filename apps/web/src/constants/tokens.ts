@@ -93,6 +93,13 @@ export const MATIC_POLYGON = new Token(
   'MATIC',
   'Matic'
 )
+export const NZT_NEXIS = new Token(
+  ChainId.NEXIS,
+  '0x0000000000000000000000000000000000001010',
+  18,
+  'NZT',
+  'NEXIS'
+)
 export const DAI_POLYGON = new Token(
   ChainId.POLYGON,
   '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',
@@ -334,6 +341,8 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'Celo native asset'
   ),
   [ChainId.BNB]: new Token(ChainId.BNB, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
+  //@todo raebeatrose4
+  [ChainId.NEXIS]: new Token(ChainId.NEXIS, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'NZT', 'Nexis'),
   [ChainId.AVALANCHE]: new Token(
     ChainId.AVALANCHE,
     '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
@@ -483,6 +492,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in ChainId]?: s
   },
 }
 
+//@ts-ignore
 const STABLECOINS: { [chainId in ChainId]: Token[] } = {
   [ChainId.MAINNET]: [USDC_MAINNET, DAI, USDT],
   [ChainId.ARBITRUM_ONE]: [USDC_ARBITRUM, DAI_ARBITRUM_ONE],
@@ -503,6 +513,7 @@ const STABLECOINS: { [chainId in ChainId]: Token[] } = {
   [ChainId.BASE_GOERLI]: [],
   [ChainId.OPTIMISM_SEPOLIA]: [USDC_SEPOLIA],
   [ChainId.ARBITRUM_SEPOLIA]: [],
+  [ChainId.NEXIS]:[]
 }
 
 export function isStablecoin(currency?: Currency): boolean {
